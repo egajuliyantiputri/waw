@@ -20,6 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['pefix'=>'admin', 'middleware'=>['auth']], function() {
-	Route::resource('authors', 'AuthorsController');
+	Route::resource('barang', 'Barang');
 });
 
